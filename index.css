@@ -1,0 +1,1061 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700;800&display=swap');
+/* rubik */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+/* Nunito */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+/* Quicksand */
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+i {
+    color: white;
+    cursor: pointer;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #080b12, #010915);
+}
+
+body #container_web {
+    width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+
+/* header & nav */
+
+#container_web header {
+    width: 100%;
+    min-width: 373px;
+    z-index: 1000;
+}
+
+
+
+#container_web header nav.mainMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 80;
+    padding: 2px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #372c46;
+    box-shadow: 0 2px 10px rgba(28, 28, 28, 0.5);
+    border-radius: 0 0 12px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(55, 44, 70, 0.5);
+    /* nền hơi trong suốt */
+    backdrop-filter: blur(5px);
+    /* hiệu ứng làm mờ nền */
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#container_web header nav #Logo {
+    width: 65px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container_web header nav #Logo img {
+    width: 64px;
+}
+
+
+#container_web header nav .nav-links {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#container_web header nav .nav-links .btn_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
+    opacity: .6;
+    padding: 7px 12px;
+    border-radius: 5px 5px 2px 2px;
+    color: white;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+#container_web header nav .nav-links .btn_nav:hover {
+    opacity: 1;
+    /* background-color: #703bbba1;
+    border-color: #e4d1ff; */
+}
+
+#container_web header nav .nav-links .btn_nav-select {
+    opacity: 1;
+    border-color: #a57efd;
+}
+
+#container_web header nav .nav-links .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* width: 80px;test */
+    height: 4px;
+    border-radius: 15px;
+    background-color: #a57efd;
+    transition: all .3s ease;
+}
+
+/* nav menu */
+#container_web header nav .nav-menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    /* border: 1px solid red; */
+}
+
+#container_web header nav .nav-menu .i {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+
+
+/* nav mobile */
+#container_web .container_mobbile_menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: -5px;
+    z-index: 80;
+    display: none; /*mở thì thay đổi ở đây thành flex*/
+    justify-content: end;
+    align-items: center;
+    background: rgba(24, 24, 24, 0.451);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(20px);
+    opacity: 0; /*mở thì thay đổi ở đây*/
+    transition: all 0.3s ease;
+}
+
+#container_web .container_mobbile_menu .Mobile_menu {
+    position: absolute;
+    width: 340px;
+    height: 100%;
+    padding: 25px 30px;
+    right: -340px; /*mở thì thay đổi ở đây thành flex*/
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(55, 44, 70, 0.85);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#container_web .container_mobbile_menu .close-nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+    color: #ffffffd0;
+    cursor: pointer;
+}
+
+#container_web .container_mobbile_menu .btn_mobileMenu {
+    color: #ccc;
+    font-size: 18px;
+    padding: 14px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+}
+#container_web .container_mobbile_menu .btn_mobileMenu-select {
+    color: #ffffff;
+    background-color: rgba(104, 104, 104, 0.167);
+    border-left: 4px solid rgb(86, 4, 200);
+    font-weight: 600;
+    padding-left: 16px;
+}
+
+#container_web .container_mobbile_menu-enlable {
+    display: flex; /*mở thì thay đổi ở đây thành flex*/
+    opacity: 1; /*mở thì thay đổi ở đây*/
+}
+#container_web .container_mobbile_menu .Mobile_menu-enlable {
+    right: 0px; /*mở thì thay đổi ở đây thành flex*/
+}
+
+/* animation nav mobile */
+@keyframes slipin {
+    from {
+        opacity: 0;
+        right: -340px;
+    }
+    to {
+        opacity: 1;
+        right: 0px;
+    }
+}
+@keyframes slipout {
+    from {
+        opacity: 1;
+        right: 0px;
+    }
+    to {
+        opacity: 0;
+        right: -340px;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/* wp-content */
+
+#container_web #wp-content {
+    width: 100%;
+    min-width: 373px;
+    transition: all .6s ease;
+}
+
+
+/* main */
+
+#container_web #wp-content #main {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    background-color: #05050c;
+    transition: all .3s ease;
+}
+
+/* bgr */
+#container_web #wp-content #main .container_bgr {
+    padding: 70px 0px 10px 0px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 0;
+    color: #000000;
+    font-size: 180px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    line-height: 140px;
+}
+
+#container_web #wp-content #main .container_Main {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+#container_web #wp-content #main .container_Main .preface1 {
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    transition: all .3s ease;
+    display: none;
+}
+
+
+/* avatar main */
+#container_web #wp-content #main .container_Main #main_avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: all .3s ease;
+}
+
+#container_web #wp-content #main .container_Main #main_avatar .avatar {
+    width: 410px;
+    border-radius: 12px;
+    border: 2px solid #a9a9a9;
+    box-shadow: 0px 0px 14px #d58bee99;
+    transition: all .3s ease;
+}
+
+#container_web #wp-content #main .container_Main #main_avatar .Container_Sub_link {
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#container_web #wp-content #main .container_Main #main_avatar .Container_Sub_link .sub_link {
+    width: 54px;
+    height: 54px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-position-x: center;
+    background-position-y: center;
+    transition: all .3s ease;
+}
+
+#container_web #wp-content #main .container_Main #main_avatar .Container_Sub_link .sub_link1 {
+    background-image: url('image/LogoFB.png');
+}
+
+#container_web #wp-content #main .container_Main #main_avatar .Container_Sub_link .sub_link2 {
+    background-image: url('image/LogoIG.png');
+}
+
+#container_web #wp-content #main .container_Main #main_avatar .Container_Sub_link .sub_link3 {
+    background-image: url('image/LogoGIT.png');
+}
+
+#container_web #wp-content #main .container_Main #main_avatar .Container_Sub_link .sub_link4 {
+    background-image: url('image/LogoLK.png');
+}
+
+#container_web #wp-content #main .container_Main #main_avatar .Container_Sub_link .sub_link:hover {
+    box-shadow: 0px 0px 10px #c094cf88;
+    transform: translateY(-3px);
+}
+
+/* preface */
+
+#container_web #wp-content #main .container_Main #container_preface {
+    height: 460px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    transition: all .3s ease;
+}
+
+#container_web #wp-content #main .container_Main #container_preface .preface h1 {
+    color: #fff;
+    font-size: 90px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 85px;
+    transition: all .3s ease;
+}
+
+#container_web #wp-content #main .container_Main #container_preface .preface span {
+    color: #9f9f9f;
+    font-size: 24px;
+    font-family: 'Nunito', sans-serif;
+    line-height: 70px;
+    transition: all .3s ease;
+}
+
+#container_web #wp-content #main .container_Main #container_preface .container_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    transition: all .3s ease;
+}
+
+#container_web #wp-content #main .container_Main #container_preface .container_button button {
+    padding: 17px 65px;
+    font-size: 27px;
+    color: white;
+
+    background: linear-gradient(90deg, #5c3d89, #4a6fca, #e16b7b, #4a6fca, #5c3d89);
+    /* Thêm: Để gradient rộng ra và có thể "di chuyển" */
+    background-size: 200% 100%;
+    /* NEW: Kéo giãn background ra gấp đôi chiều ngang */
+    background-position: left center;
+    /* NEW: Ban đầu đặt vị trí nền ở bên trái */
+
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+
+    /* Sửa: Chuyển transition từ 'all' sang chỉ 'background-position' */
+    transition: background-position .6s ease, box-shadow .4s ease;
+    /* thêm transition cho bgr và shadow*/
+}
+
+#container_web #wp-content #main .container_Main #container_preface .container_button button:hover {
+    /* di chuyển sang phải khi hover */
+    background-position: right center;
+    box-shadow: 0px 0px 30px #c094cf88;
+}
+
+
+
+
+/* cho chữ tiêu đề các mục chính */
+#container_web #wp-content .title {
+    font-size: 45px;
+    font-weight: 200;
+}
+
+#container_web #wp-content .introduce_title_line {
+    max-width: 300px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #33e0c2;
+}
+
+
+/* introduce */
+#container_web #wp-content #introduce,
+#container_web #wp-content #skills,
+#container_web #wp-content #platforms {
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+
+#container_web #wp-content #introduce .introduce_container,
+#container_web #wp-content #skills .container_skills,
+#container_web #wp-content #platforms .platforms_container {
+    width: 100%;
+    margin-top: 70px;
+    padding: 0 100px;
+    display: flex;
+    flex-flow: column;
+    gap: 2px;
+    transition: all .6 ease;
+}
+
+#container_web #wp-content #introduce .introduce_container .introduce_title_line {
+    width: 200px;
+}
+
+#container_web #wp-content #introduce .introduce_container .information {
+    padding: 30px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .6 ease;
+}
+
+#container_web #wp-content #introduce .introduce_container .left_information .infomation_container {
+    max-width: 800px;
+    font-size: 20px;
+    color: #cdcdcd;
+    font-family: 'Quicksand', sans-serif;
+    /* border: 1px solid red; */
+}
+
+#introduce .introduce_container .left_information .infomation_container .title_infomation {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+/* học vấn */
+#introduce .introduce_container .left_information .infomation_container .list_education_container .education-item {
+    /* border: 1px solid; */
+    list-style-type: none;
+    margin-bottom: 40px;
+}
+
+#introduce .introduce_container .left_information .infomation_container .list_education_container .education-item span.education-period {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 35px;
+}
+
+/* học vấn và về tôi sử dụng chung code ul */
+#introduce .introduce_container .left_information .infomation_container .list_education_container .education-item .list_education,
+#introduce .introduce_container .left_information .infomation_container .list_AboutMe_container {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin: 8px 0 25px 20px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 500;
+    /* border: 1px solid red; */
+}
+
+
+#container_web #wp-content #introduce .introduce_container .container_btn_download {
+    padding: 25px 80px 0 80px;
+    border-top: 1px solid #383838;
+}
+
+#container_web #wp-content #introduce .introduce_container .btn_download_cv {
+    padding: 15px 55px;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(90deg, #0d7471, #3bc9af, #0d7471);
+    background-size: 200% 100%;
+    background-position: right center;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+
+    transition: background-position .6s ease, box-shadow .4s ease;
+}
+
+#container_web #wp-content #introduce .introduce_container .btn_download_cv:hover {
+    background-position: left center;
+    box-shadow: 0px 0px 30px #c094cf88;
+}
+
+
+#container_web #wp-content #introduce .introduce_container .information .infor_avatar {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 300px;
+}
+
+#container_web #wp-content #introduce .introduce_container .information .infor_avatar img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* skill */
+
+#container_web #wp-content #skills .container_skills .introduce_title_line {
+    width: 112px;
+}
+
+#container_web #wp-content #skills .container_skills .container_slider.swiper {
+    max-width: 90%;
+    margin: 10px auto 0 auto;
+    overflow: hidden;
+    padding: 30px 60px 40px 60px;
+    /* border: 1px solid; */
+}
+
+
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    list-style: none;
+}
+
+
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    user-select: none;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #0e0e0e;
+    transition: all .3s ease;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+}
+
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link:hover { background-color: #181818; }
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link:active { cursor: grabbing; }
+
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link .image-skills {
+    max-width: 300px;
+    max-height: 220px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link .image-skills img { width: 105%; height: auto; object-fit: cover; }
+
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link .container_content {
+    width: 100%;
+    max-width: 300px;
+    height: 230px;
+    overflow: hidden;
+}
+
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link .container_content .tile-skills {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    width: fit-content;
+    border-radius: 50px;
+    padding: 8px 18px;
+    background-color: #4a6fca;
+    margin-bottom: 12px;
+}
+
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link .container_content .sp_content {
+    display: block;
+    overflow: hidden;
+    width: 95%;
+    max-height: 46px;
+    margin: 0 auto;
+    margin-bottom: 7px;
+}
+
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link .container_content .content-skills {
+    display: block;
+    width: 95%;
+    height: 120px;
+    margin: 0 auto;
+    padding: 0 14px;
+    overflow: hidden;
+    color: #b6b9bd;
+}
+
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link .container_content .content-skills li {
+    margin-left: 6px;
+    list-style: disc;
+}
+
+
+.container_slider .swiper-pagination-bullet {
+    height: 10px;
+    width: 10px;
+    opacity: 0.5;
+    background-color: #4a6fca;
+}
+
+.container_slider .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+
+
+
+
+/* platforms */
+
+#container_web #wp-content #platforms .platforms_container {
+    align-items: center;
+    margin-top: 80px;
+}
+
+#container_web #wp-content #platforms .platforms_container .introduce_title_line {
+    width: 200px;
+}
+
+#container_web #wp-content #platforms .platforms_container .container-link-platforms {
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 40px;
+    margin: 50px auto 0 auto;
+    place-items: center;
+}
+
+#container_web #wp-content #platforms .platforms_container .container-link-platforms .platform-link {
+    display: flex;
+    align-items: center;
+    max-width: 290px;
+    overflow: hidden;
+    gap: 12px;
+    background-color: #101828;
+    padding: 6px 15px 6px 8px;
+    border-radius: 48px;
+    border: 1px solid #1f2a40;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.platform-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 30px #c094cf88;
+}
+
+#container_web #wp-content #platforms .platforms_container .container-link-platforms .platform-link .platform-link_logo {
+    width: 58px;
+    height: 58px;
+    border-radius: 50px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+#container_web #wp-content #platforms .platforms_container .container-link-platforms .platform-link .platform-link_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#container_web #wp-content #platforms .platforms_container .container-link-platforms .platform-link .platform-link_account {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 180px;
+    height: 60px;
+    line-height: 24px;
+}
+
+#container_web #wp-content #platforms .platforms_container .container-link-platforms .platform-link .platform-link_account h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#container_web #wp-content #platforms .platforms_container .container-link-platforms .platform-link .platform-link_account span {
+    font-size: 14px;
+    color: #a0aec0;
+    font-weight: 500;
+}
+
+
+/* footer */
+
+#container_web #footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    margin-top: 100px;
+    border-top: 1px solid rgb(56, 56, 56);
+    box-shadow: 0 -10px 10px rgba(38, 38, 38, 0.461);
+    font-size: 20px;
+    color: rgb(59, 59, 59);
+}
+
+
+
+@media screen and (max-width: 1330px) {
+
+    /* main */
+    #container_web #wp-content #main .container_Main #main_avatar {
+        gap: 17px;
+    }
+
+    #container_web #wp-content #main .container_Main #main_avatar .avatar {
+        width: 370px;
+        border-radius: 12px;
+    }
+
+    #container_web #wp-content #main .container_Main #main_avatar .Container_Sub_link .sub_link {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    #container_web #wp-content #main .container_Main #container_preface {
+        height: 450px;
+    }
+
+    #container_web #wp-content #main .container_Main #container_preface .preface h1 {
+        font-size: 80px;
+        line-height: 75px;
+    }
+
+    #container_web #wp-content #main .container_Main #container_preface .preface span {
+        font-size: 19px;
+        line-height: 63px;
+    }
+
+    #container_web #wp-content #main .container_Main #container_preface .container_button {
+        margin-top: 20px;
+    }
+
+    #container_web #wp-content #main .container_Main #container_preface .container_button button {
+        padding: 15px 59px;
+        font-size: 21px;
+        border-radius: 22px;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+
+    /* main */
+    #container_web #wp-content #main .container_Main #main_avatar {
+        gap: 12px;
+    }
+
+    #container_web #wp-content #main .container_Main #main_avatar .avatar {
+        width: 350px;
+    }
+
+    #container_web #wp-content #main .container_Main #container_preface .preface h1 {
+        font-size: 75px;
+        line-height: 74px;
+    }
+
+    #container_web #wp-content #main .container_Main #container_preface .preface span {
+        font-size: 19px;
+        line-height: 60px;
+    }
+
+    #container_web #wp-content #main .container_Main #container_preface .container_button {
+        margin-top: 18px;
+    }
+
+    #container_web #wp-content #main .container_Main #container_preface .container_button button {
+        padding: 15px 55px;
+        font-size: 20px;
+        border-radius: 21px;
+    }
+
+
+
+
+    /* introduce */
+    #container_web #wp-content #introduce .introduce_container,
+    #container_web #wp-content #skills .container_skills,
+    #container_web #wp-content #platforms .platforms_container {
+        padding: 0 60px;
+    }
+
+
+
+    /* plastform */
+    #container_web #wp-content #platforms .platforms_container .container-link-platforms {
+        width: 80%;
+    }
+
+
+
+    /* BTN Dowload */
+
+    #container_web #wp-content #introduce .introduce_container .btn_download_cv {
+        padding: 15px 48px;
+        font-size: 18px;
+        border-radius: 18px;
+    }
+}
+
+
+
+@media screen and (max-width: 1080px) {
+
+    /* main */
+    #container_web #wp-content #main .container_Main #main_avatar {
+        gap: 12px;
+        flex-flow: column;
+    }
+
+    #container_web #wp-content #main .container_Main #main_avatar .Container_Sub_link {
+        padding: 10px;
+        gap: 30px;
+        flex-flow: row-reverse;
+    }
+
+
+    /* skill */
+
+    #container_web #wp-content #skills .container_skills .container_slider.swiper {
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+
+    /* main */
+
+    #container_web #wp-content #main .container_Main {
+        top: 50%;
+        flex-flow: column;
+        align-items: end;
+        justify-content: center;
+        padding: 0 24px;
+        /* border: 1px solid red; */
+    }
+
+
+    #container_web #wp-content #main .container_Main .preface1 {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    #container_web #wp-content #main .container_Main .preface1 h1 {
+        font-size: 55px;
+        font-weight: 500;
+    }
+
+
+
+    #container_web #wp-content #main .container_Main #container_preface {
+        display: none;
+    }
+
+
+    #container_web #wp-content #main .container_Main #main_avatar {
+        gap: 12px;
+        flex-direction: row-reverse;
+    }
+
+    #container_web #wp-content #main .container_Main #main_avatar .avatar {
+        width: 360px;
+    }
+
+    #container_web #wp-content #main .container_Main #main_avatar .Container_Sub_link {
+        padding: 10px;
+        gap: 30px;
+        flex-flow: column;
+    }
+
+
+    /* skill */
+
+    #container_web #wp-content #skills .container_skills .container_slider.swiper {
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    #container_web header nav.mainMenu {
+        padding: 2px 30px;
+    }
+
+    #container_web header nav .nav-menu {
+        display: flex;
+    }
+
+    #container_web header nav .nav-links {
+        display: none;
+    }
+
+
+
+    /* introduce */
+    #container_web #wp-content #introduce .introduce_container,
+    #container_web #wp-content #skills .container_skills,
+    #container_web #wp-content #platforms .platforms_container {
+        padding: 0 30px;
+    }
+
+    #container_web #wp-content .title {
+        font-size: 35px;
+        font-weight: 200;
+    }
+
+    #container_web #wp-content #introduce .introduce_container .introduce_title_line {
+        width: 150px;
+    }
+
+    #container_web #wp-content #skills .container_skills .introduce_title_line {
+        width: 85px;
+    }
+
+    #container_web #wp-content #platforms .platforms_container .introduce_title_line {
+        width: 150px;
+    }
+
+    #container_web #wp-content #introduce .introduce_container .information {
+        padding: 30px 30px 0px 30px;
+    }
+
+    #introduce .introduce_container .left_information .infomation_container .title_infomation {
+        font-size: 22px;
+    }
+
+    #introduce .introduce_container .left_information .infomation_container .list_education_container .education-item .list_education,
+    #introduce .introduce_container .left_information .infomation_container .list_AboutMe_container {
+        font-size: 18px;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+    #container_web #wp-content #introduce .introduce_container .information .infor_avatar {
+        display: none;
+    }
+
+    #container_web #wp-content #introduce .introduce_container .information {
+        display: flex;
+        justify-content: left;
+    }
+
+    #container_web #wp-content #introduce .introduce_container .btn_download_cv {
+        padding: 14px 40px;
+        font-size: 16px;
+        border-radius: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #container_web #wp-content #skills .container_skills .container_slider.swiper {
+        max-width: 95%;
+        padding: 30px 30px 40px 30px;
+    }
+
+    #container_web #wp-content #skills .container_skills .container_slider.swiper .swiper-button {
+        display: none;
+    }
+}
