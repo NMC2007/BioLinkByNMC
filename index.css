@@ -154,13 +154,15 @@ body #container_web {
     height: 100%;
     top: -5px;
     z-index: 80;
-    display: none; /*mở thì thay đổi ở đây thành flex*/
+    display: none;
+    /*mở thì thay đổi ở đây thành flex*/
     justify-content: end;
     align-items: center;
     background: rgba(24, 24, 24, 0.451);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(20px);
-    opacity: 0; /*mở thì thay đổi ở đây*/
+    opacity: 0;
+    /*mở thì thay đổi ở đây*/
     transition: all 0.3s ease;
 }
 
@@ -169,7 +171,8 @@ body #container_web {
     width: 340px;
     height: 100%;
     padding: 25px 30px;
-    right: -340px; /*mở thì thay đổi ở đây thành flex*/
+    right: -340px;
+    /*mở thì thay đổi ở đây thành flex*/
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -200,6 +203,7 @@ body #container_web {
     text-align: left;
     cursor: pointer;
 }
+
 #container_web .container_mobbile_menu .btn_mobileMenu-select {
     color: #ffffff;
     background-color: rgba(104, 104, 104, 0.167);
@@ -209,11 +213,15 @@ body #container_web {
 }
 
 #container_web .container_mobbile_menu-enlable {
-    display: flex; /*mở thì thay đổi ở đây thành flex*/
-    opacity: 1; /*mở thì thay đổi ở đây*/
+    display: flex;
+    /*mở thì thay đổi ở đây thành flex*/
+    opacity: 1;
+    /*mở thì thay đổi ở đây*/
 }
+
 #container_web .container_mobbile_menu .Mobile_menu-enlable {
-    right: 0px; /*mở thì thay đổi ở đây thành flex*/
+    right: 0px;
+    /*mở thì thay đổi ở đây thành flex*/
 }
 
 /* animation nav mobile */
@@ -222,16 +230,19 @@ body #container_web {
         opacity: 0;
         right: -340px;
     }
+
     to {
         opacity: 1;
         right: 0px;
     }
 }
+
 @keyframes slipout {
     from {
         opacity: 1;
         right: 0px;
     }
+
     to {
         opacity: 0;
         right: -340px;
@@ -242,14 +253,17 @@ body #container_web {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
+
 @keyframes hide {
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
     }
@@ -496,7 +510,6 @@ body #container_web {
     font-size: 20px;
     color: #cdcdcd;
     font-family: 'Quicksand', sans-serif;
-    /* border: 1px solid red; */
 }
 
 #introduce .introduce_container .left_information .infomation_container .title_infomation {
@@ -529,7 +542,12 @@ body #container_web {
     line-height: 35px;
     font-size: 20px;
     font-weight: 500;
-    /* border: 1px solid red; */
+}
+
+/* học vấn và về tôi sử dụng chung code li */
+#introduce .introduce_container .left_information .infomation_container .list_education_container .education-item .list_education li,
+#introduce .introduce_container .left_information .infomation_container .list_AboutMe_container li {
+    margin-bottom: 8px;
 }
 
 
@@ -590,7 +608,6 @@ body #container_web {
     margin: 10px auto 0 auto;
     overflow: hidden;
     padding: 30px 60px 40px 60px;
-    /* border: 1px solid; */
 }
 
 
@@ -608,7 +625,7 @@ body #container_web {
     align-items: center;
     user-select: none;
     max-width: 400px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 34px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: #0e0e0e;
@@ -617,8 +634,13 @@ body #container_web {
     font-family: 'Nunito', sans-serif;
 }
 
-#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link:hover { background-color: #181818; }
-#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link:active { cursor: grabbing; }
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link:hover {
+    background-color: #181818;
+}
+
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link:active {
+    cursor: grabbing;
+}
 
 #container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link .image-skills {
     max-width: 300px;
@@ -626,9 +648,16 @@ body #container_web {
     margin-bottom: 15px;
     overflow: hidden;
     border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link .image-skills img { width: 105%; height: auto; object-fit: cover; }
+#container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link .image-skills img {
+    width: 105%;
+    height: auto;
+    object-fit: cover;
+}
 
 #container_web #wp-content #skills .container_skills .container_slider .slider-skills .skill-item .skill-link .container_content {
     width: 100%;
@@ -1050,12 +1079,75 @@ body #container_web {
 }
 
 @media screen and (max-width: 600px) {
+
+    #container_web header nav #Logo {
+        width: 60px;
+        height: 65px;
+    }
+
+    #container_web #wp-content #main .container_Main {
+        padding: 0 12px;
+        /* border: 1px solid red; */
+    }
+
+    #container_web header nav #Logo img {
+        width: 56px;
+    }
+
+    #container_web #wp-content #main .container_Main #main_avatar {
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    #container_web #wp-content #main .container_Main #main_avatar .Container_Sub_link {
+        padding: 10px;
+        gap: 30px;
+        flex-flow: row-reverse;
+    }
+
+    #container_web #wp-content #main .container_Main #main_avatar .avatar {
+        width: 300px;
+    }
+
+
+    #container_web #wp-content #introduce .introduce_container,
+    #container_web #wp-content #skills .container_skills,
+    #container_web #wp-content #platforms .platforms_container {
+        padding: 0 12px;
+    }
+
+
+
+    #introduce .introduce_container .left_information .infomation_container .list_education_container .education-item .list_education,
+    #introduce .introduce_container .left_information .infomation_container .list_AboutMe_container {
+        padding-left: 20px;
+        margin: 8px 0 15px 20px;
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+
+    #container_web #wp-content #introduce .introduce_container .information {
+        padding: 30px 15px 0 15px;
+    }
+
+
+
     #container_web #wp-content #skills .container_skills .container_slider.swiper {
-        max-width: 95%;
+        max-width: 100%;
         padding: 30px 30px 40px 30px;
     }
 
     #container_web #wp-content #skills .container_skills .container_slider.swiper .swiper-button {
         display: none;
+    }
+
+
+    #container_web #wp-content #platforms .platforms_container .container-link-platforms {
+        width: 100%;
+    }
+
+    #container_web #wp-content #platforms .platforms_container .container-link-platforms .platform-link {
+        max-width: 250px;
     }
 }

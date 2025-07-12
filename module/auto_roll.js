@@ -29,7 +29,7 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 1, // phần tử phải chiếm cả màn hình
+    threshold: 0.5, // phần tử phải chiếm cả màn hình
 });
 
 sections.forEach(section => observer.observe(section));
