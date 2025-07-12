@@ -8,6 +8,8 @@ import { autoRoll } from "./auto_roll.js";
 
 import { observer } from "./auto_roll.js";
 
+import { hideMenuMobile } from "./nav_menu.js";
+
 // tiếp nhận click và lấy ra data
 function handle_click(elements, btnAboutme, btnDownloadCV) {
 
@@ -32,6 +34,8 @@ function handle_click(elements, btnAboutme, btnDownloadCV) {
                 activeMobile(this)
 
                 activeLine($(`a[from="computer"][data="${this.getAttribute('data')}"]`))
+
+                hideMenuMobile()
             }
         }
     }

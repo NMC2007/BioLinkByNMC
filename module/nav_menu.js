@@ -3,6 +3,8 @@ const $ = document.querySelector.bind(document)
 const bgr_mobileMenu = $('#container_web .container_mobbile_menu')
 const mobileMenu = $('#container_web .container_mobbile_menu .Mobile_menu')
 
+let hideMenuMobile
+
 function menuMobile(eleShow, eleHide) {
 
     // hiện menu
@@ -28,7 +30,7 @@ function menuMobile(eleShow, eleHide) {
         e.stopPropagation();
     }
 
-    function hideMenuMobile() {
+    hideMenuMobile = function() {
         // ẩn bgr
         bgr_mobileMenu.style.animation = 'hide ease .3s forwards'
 
@@ -57,4 +59,4 @@ function menuMobile(eleShow, eleHide) {
 
 }
 
-export { menuMobile }
+export { menuMobile, hideMenuMobile }
